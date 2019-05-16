@@ -1,11 +1,15 @@
+
 #
 # Redis Dockerfile
 #
-# https://github.com/dockerfile/redis
+# https://github.com/Volkodav-vvs/docker-redis-ubuntu
 #
 
-# Pull base image.
-FROM dockerfile/ubuntu
+# Create base image.
+FROM ubuntu:latest
+
+RUN apt-get update
+RUN apt-get -y install wget make build-essential
 
 # Install Redis.
 RUN \
